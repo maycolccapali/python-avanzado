@@ -12,30 +12,32 @@ Ejemplos en código
 
 1. Factorial de un número
 
-El factorial de un número (n!) es el producto de todos los enteros desde 1 hasta n.
-python
-def factorial(n):
-    # Caso base: el factorial de 0 o 1 es 1
-    if n <= 1:
-        return 1
-    # Caso recursivo: n * factorial del número anterior
-    return n * factorial(n - 1)
-
-print(factorial(5))  # Salida: 120
-
-
-2. Cuenta regresiva
-
-Un ejemplo sencillo sin multiplicaciones, ideal para ver la pila de llamadas:
-python
+```python
 def cuenta_regresiva(n):
-    # Caso base
-    if n <= 0:
+    if n == 0:  # Caso base
         print("¡Despegue!")
     else:
         print(n)
-        # Caso recursivo
-        cuenta_regresiva(n - 1)
+        cuenta_regresiva(n - 1)  # Caso recursivo
+
+cuenta_regresiva(5)
+```
+
+
+2. Cuenta regresiva
+   
+   ```python
+   def factorial(n):
+    if n == 0 or n == 1:  # Caso base
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
+print(factorial(4))
+print(factorial(3))```
+
+
 
 cuenta_regresiva(5)
 # Salida:
